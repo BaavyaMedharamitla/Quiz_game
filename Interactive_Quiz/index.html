@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Quiz - Portfolio Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="toggleTheme">🌙</button>
+  </div>
+
+  <div class="quiz-box">
+    <header>
+      <h1>Smart Quiz</h1>
+      <div class="progress">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="timer">
+        ⏱️ <span id="timer">15</span>s
+      </div>
+    </header>
+
+    <section id="quiz-container">
+      <div id="question-area">
+        <div class="question-count">Question <span id="current-q">1</span> of <span id="total-q">5</span></div>
+        <h2 id="question">Loading question...</h2>
+        <ul id="options-list"></ul>
+      </div>
+      <div id="feedback"></div>
+      <button id="next-btn" disabled>Next ➤</button>
+    </section>
+
+    <section id="result-screen" class="hidden">
+      <h2>🎉 Quiz Complete!</h2>
+      <p>Your Score: <span id="final-score"></span></p>
+      <p>High Score: <span id="high-score"></span></p>
+      <button onclick="restartQuiz()">🔁 Restart</button>
+      <button id="shareBtn">📤 Share Result</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
